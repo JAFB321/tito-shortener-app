@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon3.ico" type="image/x-icon" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tito shortener</title>
+</head>
+
+<body>
+  <div id="app">
+    <main class="main-content">
+      <h2>
+        <span style="font-weight: bold">Tito </span>
+        <span style="font-style: oblique">URL shortener</span>
+      </h2>
+      <img class="logo" src="/tito.svg" alt="cat face" />
+
+
+      <input placeholder="Paste your link here..." id="short-url" name="short-url" type="text"
+        class="minimal-input minimal-input-url" />
+
+
+      <button id="short-url-btn" class="short-url-btn hide">
+        Make it short
+      </button>
+
+    </main>
+
+
+    <div class="shortened-url-list-container">
+      <hr class="astetik-hr">
+      <h3>Your shortened Url's</h3>
+
+      <ul class="shortened-url-list">
+      </ul>
+    </div>
+
+
+    <template id="url-item-template">
+      <li class="shortened-url-item">
+        <div class="tooltip">
+          <p class="shortened-url-original">
+            <code class="shortened-url-original--code"></code>
+          </p>
+
+          <code class="tooltiptext shortened-url-original--code"></code>
+
+        </div>
+        <div class="copy-input-container">
+          <input placeholder="s" value="tshort.com/1234" readonly id="shortened-url" type="text"
+            class="minimal-input" />
+          <button id="copy-btn" class="copy-btn">Copy</button>
+        </div>
+      </li>
+    </template>
+    <script type="module" src="/src/main.ts"></script>
+
+</body>
+
+</html>
